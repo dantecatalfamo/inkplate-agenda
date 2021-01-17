@@ -10,12 +10,13 @@ Inkplate display(INKPLATE_1BIT);
 void setup() {
     Serial.begin(115200);
     display.begin();
-    display.setTextSize(2);
+    display.setTextSize(2, 3);
     Serial.print("Hello from Inkplate!\n");
     display.clearDisplay();
     display.display();
     display.println("Hello there friend! :)");
     display.println("How are you?");
+    display.printf("Connecting to %s\n", ssid);
     display.partialUpdate();
 
     WiFi.begin(ssid, wifiPass);
