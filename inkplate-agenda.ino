@@ -51,6 +51,7 @@ void loop() {
     } else {
         display.printf("\nError in HTTP, got code %d\n", httpCode);
     }
+    http.end();
     display.display();
     delay(DELAY_REFETCH);
 }
