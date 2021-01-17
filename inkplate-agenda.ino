@@ -2,7 +2,7 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include "secrets.h"
-#define DELAY_REFETCH 300000
+#define DELAY_REFETCH 900000
 
 
 Inkplate display(INKPLATE_1BIT);
