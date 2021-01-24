@@ -39,6 +39,7 @@ void setup() {
 
 void loop() {
     if (WiFi.status() != WL_CONNECTED) {
+        display.setCursor(0, 0);
         display.println("\nWiFi disconnected.");
         display.partialUpdate();
         return;
