@@ -3,9 +3,11 @@
 #include <HTTPClient.h>
 #include "secrets.h"
 #define DELAY_REFETCH 600000
+#define CLEAN_REFRESHES 20
 
 
 Inkplate display(INKPLATE_1BIT);
+int refreshes;
 
 void setup() {
     Serial.begin(115200);
@@ -32,6 +34,7 @@ void setup() {
     display.println(WiFi.localIP());
     display.partialUpdate();
     delay(5000);
+    refreshes = 0;
 }
 
 void loop() {
@@ -52,6 +55,16 @@ void loop() {
         display.printf("\nError in HTTP, got code %d\n", httpCode);
     }
     http.end();
-    display.display();
+    refreshes++;
+    if (refreshes > CLEAN_REFRESHES) {
+        display.display();
+        refreshes = 0;
+    } else {
+        display.partialUpdate();
+    }
     delay(DELAY_REFETCH);
 }
+
+// Local Variables:
+// mode: c++
+// End:
