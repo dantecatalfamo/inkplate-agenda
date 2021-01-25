@@ -2,8 +2,8 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include "secrets.h"
-#define DELAY_REFETCH 600000
-#define CLEAN_REFRESHES 20
+#define DELAY_REFETCH 300000
+#define CLEAN_REFRESHES 72
 
 
 Inkplate display(INKPLATE_1BIT);
