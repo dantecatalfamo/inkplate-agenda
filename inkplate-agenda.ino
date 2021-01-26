@@ -3,7 +3,7 @@
 #include <HTTPClient.h>
 #include "secrets.h"
 #define TEXT_SCALE_X 2
-#define TEXT_SCALE_y 3
+#define TEXT_SCALE_Y 3
 #define DELAY_REFETCH 300000
 #define CLEAN_REFRESHES 72
 
@@ -14,7 +14,7 @@ int refreshes;
 void setup() {
     Serial.begin(115200);
     display.begin();
-    display.setTextSize(TEXT_SCALE_X, TEXT_SCALE_y);
+    display.setTextSize(TEXT_SCALE_X, TEXT_SCALE_Y);
     Serial.print("Hello from Inkplate!\n");
     display.clearDisplay();
     display.display();
