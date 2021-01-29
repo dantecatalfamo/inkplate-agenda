@@ -1,5 +1,5 @@
 * inkplate-agenda
-  Arduino sketch for the Inkplate 6.
+  [[https://www.arduino.cc/][Arduino]] sketch for the [[https://inkplate.io/][Inkplate 6]].
 
   Written to be used in concert with the text output from [[https://github.com/dantecatalfamo/agenda-html][agenda-html]].
 
