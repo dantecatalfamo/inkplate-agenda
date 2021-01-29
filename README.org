@@ -6,10 +6,11 @@
 ** Variables
 
 *** =inkplate-agenda.ino=
-    - =TEXT_SCALE_X= (=int=) Scale multiplier for text in the horizontal direction
-    - =TEXT_SCALE_Y= (=int=) Scale multiplier for text in the vertical direction
-    - =DELAY_REFETCH= (=int=) Milliseconds between re-fetches
-    - =CLEAN_REFRESHES= (=int=) Partial screen refreshes between full refreshes
+    (All =int=)
+    - =TEXT_SCALE_X= Scale multiplier for text in the horizontal direction
+    - =TEXT_SCALE_Y= Scale multiplier for text in the vertical direction
+    - =DELAY_REFETCH= Milliseconds between re-fetches
+    - =CLEAN_REFRESHES= Partial screen refreshes between full refreshes
 
 *** =secrets.h=
     (All =const char*=)
