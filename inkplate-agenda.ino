@@ -50,9 +50,9 @@ void loop() {
     http.begin(url);
     http.setAuthorization(httpUsername, httpPassword);
     int httpCode = http.GET();
+    display.setCursor(0, 0);
     if (httpCode > 0) {
         display.clearDisplay();
-        display.setCursor(0, 0);
         display.println(http.getString());
     } else {
         display.printf("\nError in HTTP, got code %d\n", httpCode);
