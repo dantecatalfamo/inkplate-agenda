@@ -1,0 +1,20 @@
+* inkplate-agenda
+  Arduino sketch for the Inkplate 6.
+
+  Written to be used in concert with the text output from [[https://github.com/dantecatalfamo/agenda-html][agenda-html]].
+
+** Variables
+
+*** =inkplate-agenda.ino=
+    - =TEXT_SCALE_X= (=int=) Scale multiplier for text in the horizontal direction
+    - =TEXT_SCALE_Y= (=int=) Scale multiplier for text in the vertical direction
+    - =DELAY_REFETCH= (=int=) Milliseconds between re-fetches
+    - =CLEAN_REFRESHES= (=int=) Partial screen refreshes between full refreshes
+
+*** =secrets.h=
+    (All =const char*=)
+    - =ssid= SSID of the WiFi network
+    - =wifiPass= Password of the WiFi network
+    - =url= URL of the text output of [[https://github.com/dantecatalfamo/agenda-html][agenda-html]]
+    - =httpUsername= Username for HTTP basic auth
+    - =httpPassword= Password for HTTP basic auth
